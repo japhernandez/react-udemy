@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import AddCategory from "./AddCategory";
 import ListCategory from "./ListCategory";
 
-const GifExpert = () => {
-  const [categories, setCategories] = useState(["xamurai x"]);
+const GifExpert = ({ defaultCategories = [] }) => {
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
     <div className="container">

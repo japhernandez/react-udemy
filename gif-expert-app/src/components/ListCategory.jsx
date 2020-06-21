@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import GifItem from "./GifItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 
@@ -7,11 +8,17 @@ const ListCategory = ({ category }) => {
 
   return (
     <>
-      {loading
-        ? "Cargando..."
-        : images.map((img) => <GifItem key={img.id} {...img} />)}
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        images.map((img) => <GifItem key={img.id} {...img} />)
+      )}
     </>
   );
+};
+
+ListCategory.propTypes = {
+  category: PropTypes.string.isRequired,
 };
 
 export default ListCategory;
