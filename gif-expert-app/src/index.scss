@@ -34,3 +34,15 @@ code {
     }
   }
 }
+
+input[type="text"] {
+  width: 400px;
+  margin-right: 80%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #c9c8c8;
+  font-size: 20px;
+  &:focus {
+    outline: none;
+  }
+}
