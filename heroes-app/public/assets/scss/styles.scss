@@ -1,0 +1,50 @@
+@import "button";
+@import "card";
+@import "mixins/mixins";
+@import "partials/offset";
+@import "grid";
+@import "header";
+@import "variables";
+
+.example {
+  color: #fff;
+  text-align: center;
+}
+.example_colored {
+  margin: 0.625rem 0;
+  background-color: rgba(0, 49, 255, 0.15);
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.example_fixed-size {
+  height: 200px;
+}
+.example__col {
+  padding: 0.625rem;
+  background-color: #007fff;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.img-bottom {
+  height: 350px;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.img-thumbnail {
+  width: 100%;
+  height: auto;
+}

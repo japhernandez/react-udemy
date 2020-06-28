@@ -1,0 +1,32 @@
+.header {
+  background-color: #0e0202;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-left: 3rem;
+  z-index: 2;
+  .nav-bar {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 6rem;
+    .nav-right {
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          list-style: none;
+          a {
+            margin-right: 2rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

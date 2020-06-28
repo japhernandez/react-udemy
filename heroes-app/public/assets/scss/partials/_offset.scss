@@ -1,0 +1,46 @@
+@import "../variables";
+
+@if (type_of($partials) == list and index($partials, offset)) or
+  (type_of($partials) == string and index($partials, offset))
+{
+  // Generación de clases de "offset" de acuerdo al número de columnas
+  // y al número de columnas y media queries
+  @for $i from 1 through $columns {
+    .offset-right-#{$i} {
+      @include offset(right, $i);
+    }
+
+    .offset-left-#{$i} {
+      @include offset(left, $i);
+    }
+
+    @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+      .offset-#{$breakpoint-name}-right-#{$i} {
+        @include offset(right, $i, $breakpoint-name);
+      }
+
+      .offset-#{$breakpoint-name}-left-#{$i} {
+        @include offset(left, $i, $breakpoint-name);
+      }
+    }
+  }
+
+  // Generación de clases de "offset-auto", las reglas que se aplican a las media queries
+  @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+    .offset-#{$breakpoint-name}-right-auto {
+      @include offset(right, auto, $breakpoint-name);
+    }
+
+    .offset-#{$breakpoint-name}-left-auto {
+      @include offset(left, auto, $breakpoint-name);
+    }
+  }
+
+  .offset-right-auto {
+    @include offset(right);
+  }
+
+  .offset-left-auto {
+    @include offset(left);
+  }
+}

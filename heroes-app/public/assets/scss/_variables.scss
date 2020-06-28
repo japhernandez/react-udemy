@@ -1,0 +1,32 @@
+$container-width: 1140px !default; // Ancho del contenedor
+$container-padding: 15px !default; // Padding del contenedor
+$h-gutter: 30px !default; // Distancia horizontal entre columnas de la fila
+$v-gutter: $h-gutter !default; // Distancia vertical entre columnas de la fila
+$columns: 12 !default; // Número de columnas por fila
+// Indica qué enfoque se utilizará al formar la media queries - mobile first o desktop first
+$mobile-first: false !default;
+
+// Retorna min o max, que se usará para formar todas las media queries -
+// min-width 0 max-width
+@function query-direction() {
+  @if ($mobile-first) {
+    @return min;
+  } @else {
+    @return max;
+  }
+}
+
+$media-query: query-direction(); // min o max
+
+$grid-breakpoints: (
+  desktop: 1280px,
+  laptop: 1024px,
+  laptop-md: 960px,
+  tablet-landscape: 768px,
+  phone-landscape: 640px,
+  phone: 480px,
+  phone-md: 360px,
+  phone-sm: 320px,
+) !default;
+
+$partials: (offset, gutters) !default;

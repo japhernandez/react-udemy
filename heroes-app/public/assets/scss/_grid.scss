@@ -1,0 +1,29 @@
+.container {
+  @include container;
+}
+
+.row {
+  @include row;
+}
+
+.col {
+  @include col;
+}
+
+/*
+    Generación de las clases para las "columnas" y reglas para ellas basadas en la variable global 
+    $columnas - un número dado de columnas por fila
+  */
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    margin: 0 $h-gutter / 2 $v-gutter;
+  }
+}
+
+// Generación de clases "columna"
+@include generate-grid();
+
+// Generación de clases de "columna" para los media queries
+@include generate-grid-breakpoints();

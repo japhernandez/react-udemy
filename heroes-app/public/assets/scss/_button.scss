@@ -1,0 +1,20 @@
+.btn {
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  &.btn-primary {
+    background: #2a72e2;
+    color: #ffffff;
+  }
+  &.btn-outline {
+    background: #ffffff;
+    border: 1px solid #2a72e2;
+    &:hover {
+      border: 1px solid #2a72e2;
+      background-color: #647faa;
+      color: #ffffff;
+    }
+  }
+}
