@@ -9,8 +9,8 @@ const MainImage = ({ image, title, text }) => {
         rgba(0,0,0,0.65) 100%),
         url('${image}'), #1c1c1c`,
         height: "500px",
-        backgroundSize: "100%, cover",
-        backgroundPosition: "center, center",
+        // backgroundSize: "100%, cover",
+        //backgroundPosition: "center, center",
         width: "100%",
         position: "relative",
       }}
